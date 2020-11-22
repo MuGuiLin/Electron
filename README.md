@@ -1,45 +1,34 @@
-# electron-quick-start
+# Electron
 
-**Clone and run for a quick way to see Electron in action.**
+### [Electron官方文档 https://www.electronjs.org](https://www.electronjs.org/)
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+>  使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序
+>
+> ### 比你想象的更简单
+>
+> 如果你可以建一个网站，你就可以建一个桌面应用程序。 Electron 是一个使用 JavaScript, HTML 和 CSS 等 Web 技术创建原生程序的框架，它负责比较难搞的部分，你只需把精力放在你的应用的核心上即可。
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
 
-A basic Electron application needs just these files:
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+基本的Electron应用程序仅需要以下文件：
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+- `package.json` - 指向应用程序的主文件，并列出其详细信息和依赖项。
+- `main.js` - 启动应用程序并创建一个浏览器窗口以呈现HTML。 这是应用程序的“主要进程”。
+- `index.html` - 要呈现的网页。 这是应用程序的“渲染程序”
 
-## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
+### 控制台乱码怎么解决：
+
+数字表示的字符集。而常见的gb2312的值是936，utf8的值是65001
+
+``` js
+# 在package.json中的scripts中添加 chcp 65001 === utf8
+
+"scripts": {
+    "start": "chcp 65001 && electron ."
+ },
 ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-## Resources for Learning Electron
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
-
-## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
